@@ -1,0 +1,45 @@
+seed: 0
+
+device: cpu
+
+experiment:
+  num_objects: 5
+
+paths:
+  object_dir: ../general/shape_vhacd
+  snapshot_dir: snapshots
+
+bin:
+  width: 0.55
+  depth: 0.55
+  height: 0.65
+  wall_thickness: 0.02
+  margin: 0.10
+
+physics:
+  gravity: -9.81
+  gui: true
+  settle_steps: 400
+  measure_steps: 150
+
+heightmap:
+  resolution: 256
+  near: 0.01
+  far_offset: 0.20
+
+placement:
+  z_offset: 0.01
+  friction: 0.7
+  rolling_friction: 0.02
+  restitution: 0.05
+
+objective:
+  height_weight: 1.0
+  instability_weight: 25.0
+
+bo:
+  init_points: 8
+  iterations: 40
+  restarts: 10
+  raw_samples: 128
+  noise: 1e-3
